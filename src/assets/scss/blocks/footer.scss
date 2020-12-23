@@ -1,0 +1,130 @@
+.footer {
+
+    height: auto;
+    width: 100%;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    background: $gray url("/../assets/images/footer_bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.footer__wrap {
+    display: flex;
+
+    padding: 1rem;
+
+    @media (max-width: 767px) {
+        display: block;      
+    }
+
+    @media (max-width: 430px) {
+        padding: 0.5rem;
+    }
+}
+
+.footer__form {
+    width: 48%;
+
+    text-align: left;
+
+    margin-right: 30px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+
+        margin-right: 0px;
+        margin-bottom: 2rem;
+    }
+}
+
+.footer__company {
+    width: 48%;
+
+    text-align: right;
+
+    margin-left: 30px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        text-align: left;
+
+        margin-left: 0px;
+    }
+}
+
+.footer__title {
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid $gray;
+
+    @media (max-width: 767px) {
+        font-size: 1.6rem;
+    }
+
+}
+
+.footer__white {
+    color: $white;
+}
+
+.footer__light {
+    color: $gray
+}
+
+.footer__city {
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    @media (max-width: 767px) {
+        font-size: 1.2rem;
+    }
+}
+
+.footer__addterss {
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    color: $white;
+
+    @media (max-width: 767px) {
+        font-size: 1.2rem;
+    }
+}
+
+.footer__phone {
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    @media (max-width: 767px) {
+        font-size: 1.6rem;
+    }
+}
+
+
+.button__footer{
+    color: #121b21;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: $green;
+    font-size: 18px;
+    padding: 17px 40px;
+    margin-top: 10px;
+
+    transition: background-color 0.5s ease 0s;
+
+    &:hover {
+        background-color: darken($green, 5%);
+    }
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+
+        margin-top: 8px;
+    }
+}

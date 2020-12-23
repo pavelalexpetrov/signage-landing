@@ -1,0 +1,18 @@
+.point__svg {
+    width: 22px;
+    height: auto;
+
+    margin-right: 0.5rem;
+
+    @media (max-width: 767px) {
+        width: 20px;
+    }
+}
+
+.point__text {
+    font-size: 1.4rem;
+
+    @media (max-width: 767px) {
+        font-size: 1.2rem;
+    }
+}

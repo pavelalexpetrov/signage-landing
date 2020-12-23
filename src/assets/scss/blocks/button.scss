@@ -1,0 +1,31 @@
+.button {
+    cursor: pointer;
+    display: inline-block;
+    background: $green;
+    color: $white;
+    font-size: 1.2em;
+    font-weight: 900;
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+
+    z-index: 1;
+
+    transition: background-color 0.5s ease 0s;
+
+    &:hover {
+        background-color: darken($green, 5%);
+
+    }
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+        width: 290px;
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 50px;
+    }
+}
