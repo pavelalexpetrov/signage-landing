@@ -17,6 +17,7 @@ const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
 const cleanCSS = require('gulp-clean-css');
+const gcmq = require('gulp-group-css-media-queries');
 
 
 /* Paths */
@@ -95,6 +96,7 @@ function css(cb) {
             cascade: true
         }))
         .pipe(cssbeautify())
+        .pipe(gcmq())
         .pipe(dest(path.build.css))
         .pipe(cleanCSS({
             lavel: 2
