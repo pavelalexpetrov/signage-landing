@@ -7,7 +7,6 @@ const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
-const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
 const panini = require("panini");
@@ -17,6 +16,7 @@ const notify = require("gulp-notify");
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
+const cleanCSS = require('gulp-clean-css');
 
 
 /* Paths */
@@ -96,11 +96,8 @@ function css(cb) {
         }))
         .pipe(cssbeautify())
         .pipe(dest(path.build.css))
-        .pipe(cssnano({
-            zindex: false,
-            discardComments: {
-                removeAll: true
-            }
+        .pipe(cleanCSS({
+            lavel: 2
         }))
         .pipe(removeComments())
         .pipe(rename({
