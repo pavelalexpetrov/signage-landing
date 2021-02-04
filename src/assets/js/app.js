@@ -1,5 +1,7 @@
 "use strict"
 
+import Swal from 'sweetalert2';
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
     form.addEventListener('submit', formSend);
@@ -23,11 +25,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 form.reset();
                 form.classList.remove('_sending');
             } else {
-                alert('Error');
+                Swal.fire({
+                    title: 'Error processing your request!',
+                    text: 'Call to us by phone',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
                 form.classList.remove('_sending');
             }  
         } else {
-            alert ('Fill in required fields');
+            Swal.fire({
+                title: 'Error!',
+                text: 'Fill in required fields',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
         }
     }
 
@@ -63,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
     }
+
 
     // function test email
     function emailTest(input){ 
